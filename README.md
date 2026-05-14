@@ -187,3 +187,114 @@ D&C saves 5 comparisons for n=10. The advantage grows larger as n increases.
 | B1 | Binary Search | O(1) | O(log n) | O(log n) | O(1) |
 | B2 | Hashing | O(1) | O(1) | O(n) | O(M) |
 | B3 | Divide & Conquer | O(n) | O(n) | O(n) | O(log n) |
+
+
+# Assignment 4 — Graph Data Structures and Algorithms
+#Graph
+Vertices: A, B, C, D, E, F
+
+Edges:
+
+B — A = 12
+
+C — B = 4
+
+D — B = 2
+
+E — D = 2
+
+F — C = 7
+
+C — A = 15
+
+F — D = 12
+
+A — F = 3
+
+Project Structure
+assignment4/
+
+├── Task1Graph.java — Task 1: Graph Representation
+
+├── Task2Traversal.java — Task 2: DFS and BFS Traversal
+
+├── Task3Dijkstra.java — Task 3: Dijkstra Shortest Path
+
+├── Assignment4_Report.docx — Report: BFS vs DFS Analysis
+
+└── README.md
+
+#Task 1 — Graph Representation
+What it does:
+
+Creates a Graph class with adjacency list
+Implements addVertex() and addEdge() methods
+Prints the full adjacency list to console
+Output:
+
+A -> B(12), C(15), F(3)
+
+B -> A(12), C(4), D(2)
+
+C -> B(4), F(7), A(15)
+
+D -> B(2), E(2), F(12)
+
+E -> D(2)
+
+F -> C(7), D(12), A(3)
+
+Complexity:
+
+Case	Time	Space
+All cases	O(V + E)	O(V + E)
+Task 2 — DFS and BFS Traversal
+Starting Node: E
+
+DFS — goes as deep as possible using recursion before backtracking.
+
+BFS — visits all neighbors level by level using a queue.
+
+Output:
+
+DFS: E D B A C F
+
+BFS: E D B F A C
+
+Complexity:
+
+Algorithm	Time	Space
+DFS	O(V + E)	O(V)
+BFS	O(V + E)	O(V)
+Task 3 — Dijkstra Shortest Path
+Source Node: C
+
+Output:
+
+C -> A | Distance: 10 | Path: C -> F -> A
+
+C -> B | Distance: 4 | Path: C -> B
+
+C -> D | Distance: 6 | Path: C -> B -> D
+
+C -> E | Distance: 8 | Path: C -> B -> D -> E
+
+C -> F | Distance: 7 | Path: C -> F
+#Task 2 — DFS and BFS Traversal
+Starting Node: E
+DFS — goes as deep as possible using recursion before backtracking.
+BFS — visits all neighbors level by level using a queue.
+Output:
+DFS: E D B A C F
+BFS: E D B F A C
+Complexity:
+AlgorithmTimeSpaceDFSO(V + E)O(V)BFSO(V + E)O(V)
+
+#Task 3 — Dijkstra Shortest Path
+Source Node: C
+Output:
+C -> A | Distance: 10 | Path: C -> F -> A
+C -> B | Distance: 4 | Path: C -> B
+C -> D | Distance: 6 | Path: C -> B -> D
+C -> E | Distance: 8 | Path: C -> B -> D -> E
+C -> F | Distance: 7 | Path: C -> F
